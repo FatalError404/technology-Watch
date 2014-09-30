@@ -1,0 +1,39 @@
+/* main.css */
+body{
+	background: #fff;
+	margin: auto;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+div.main{
+	width: 800px;
+	margin: auto;
+	padding-top: 30%;
+}
+
+ul{
+    list-style-type: none;
+    padding:0;
+}
+
+a{
+	text-decoration: none;
+	color:#00aa00;
+}
+
+a:hover{
+	color:#00ff00;
+}
+
+#stats{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+}
