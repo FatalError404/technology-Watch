@@ -31,7 +31,7 @@
   <script type="text/javascript" src="../js/loader.js"></script>
   <h1>Upload ton modele et visualise le</h1>
   <?php
-    if( in_array( 'file', $_SESSION) )
+    if( array_key_exists( 'file', $_SESSION ) )
     {
       ?>
         <input id="file" type="hidden" value="<?php echo  $_SESSION['file']; ?>" />
@@ -40,7 +40,7 @@
   ?>
   <form action="/upload/model/" method="post" enctype="multipart/form-data">
       <input type="file" name="file" />
-      <button type="submit">Upload</button>
+      <button type="submit" name="upload">Upload</button>
   </form>
  </body>
 </html>
