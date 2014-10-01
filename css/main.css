@@ -2,6 +2,8 @@
 body{
 	background: #fff;
 	margin: auto;
+	font-family: arial;
+	color:#222;
 }
 
 canvas {
@@ -11,12 +13,6 @@ canvas {
     cursor: pointer;
 }
 
-div.main{
-	width: 800px;
-	margin: auto;
-	padding-top: 30%;
-}
-
 ul{
     list-style-type: none;
     padding:0;
@@ -24,11 +20,70 @@ ul{
 
 a{
 	text-decoration: none;
-	color:#00aa00;
+	color:#fff;
 }
 
-a:hover{
-	color:#00ff00;
+header{
+	margin-top: 10px;
+	text-align: center;
+}
+
+.right{
+	float: right;
+}
+
+.break{
+	clear:both;
+}
+
+div.content{
+	width: 800px;
+	margin: auto;
+	box-shadow:8px 0 8px -10px #000000,-8px 0 8px -10px #000000;
+}
+
+header h1 strong{
+	text-transform: uppercase;
+}
+
+header nav{
+	min-height: 145px;
+	line-height: 145px;
+	border-radius: 3px;
+}
+
+header nav ul.menu li{
+	display: inline-block;
+	background-color: #400;
+	border-radius: 3px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	cursor: move;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	width: 145px;
+	box-shadow: 0px 4px 3px #000;
+}
+
+header nav ul.menu li:hover{
+	background-color: #800;
+	box-shadow: 0px 4px 3px #bbb;
+}
+
+header nav ul.menu li:hover > a{
+	color:#000;
+}
+
+div.run{
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+	width: 800px;
+	margin: auto;
+	box-shadow: 0px 0px 10px #000;
+	border-radius: 3px;
 }
 
 #stats{
