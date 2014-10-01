@@ -8,8 +8,5 @@
 	    // on redirige vers la page en renvoyant le chemin du fichier téléversé
 	    $_SESSION['file'] = $file_name ;
 	    header('Location: http://localhost/teapot/');
-	} else {
-	    echo "Attaque potentielle par téléchargement de fichiers.
-	          Voici plus d'informations :\n";
 	}
 ?>
