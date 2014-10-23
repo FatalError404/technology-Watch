@@ -1,8 +1,8 @@
-<p>Full View</p>
-<h1>
+<h1>Full View</h1>
+<h2>
 	{{ object.title }}
-</h1>
-
+</h2>
 <p>
 	{{ object.description }}
 </p>
+<hr />

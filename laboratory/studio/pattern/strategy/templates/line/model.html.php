@@ -1,14 +1,26 @@
-<p>List View</p>
-<h1>
-	{{ object.title }}
-</h1>
-
-<p>
-	{{ object.description }}
-</p>
-<!--
-	TODO: implementer les fonction de template ( cf voir template parser )
-{% for toto in object.objects %}
-	{{ toto.title }}
-{% endfor %}
--->
+<html>
+	<head>
+		<title>
+			{{ object.title }}
+		</title>
+	</head>
+	<body>
+		<h1>List View</h1>
+		<h2>
+			{{ object.title }}
+		</h2>
+		<p>
+			{{ object.description }}
+		</p>
+		<hr />
+		{% for obj in object->objects %}
+			<h3>
+				{{ obj.title }}
+			</h3>
+			<p>
+				{{ obj.description }}
+			</p>
+			<hr />
+		{% endfor %}
+	</body>
+</html>

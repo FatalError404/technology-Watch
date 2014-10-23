@@ -17,6 +17,7 @@
 			if( $this->cacheExist() && $this->cacheSizeOk( $object, $filename ) ){
 				$this->content = $this->getCache() ;
 			}else{
+				$this->content = $this->buildTemplate( $object, $filename ) ;
 				$this->cacheTemplate() ;
 			}
 			include_once( $this->cachefile  ) ;
