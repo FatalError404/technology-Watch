@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<title>Drag Drop Menu</title>
+		<style>
+			<!--
+			body{
+				background: #fff;
+				margin: auto;
+				font-family: arial;
+				color:#222;
+			}
+
+			ul{
+			    list-style-type: none;
+			    padding:0;
+			}
+
+			a{
+				text-decoration: none;
+				color:#fff;
+			}
+
+			header{
+				margin-top: 10px;
+				text-align: center;
+			}
+
+			div.content{
+				width: 800px;
+				margin: auto;
+				box-shadow:8px 0 8px -10px #000000,-8px 0 8px -10px #000000;
+			}
+
+			header h1 strong{
+				text-transform: uppercase;
+			}
+
+			header nav{
+				min-height: 145px;
+				line-height: 145px;
+				border-radius: 3px;
+			}
+
+			header nav ul.menu li{
+				display: inline-block;
+				background-color: #400;
+				border-radius: 3px;
+				padding-left: 15px;
+				padding-right: 15px;
+				margin-top: 4px;
+				margin-bottom: 4px;
+				cursor: move;
+				font-size: 0.75em;
+				text-transform: uppercase;
+				width: 145px;
+				box-shadow: 0px 4px 3px #000;
+			}
+
+			header nav ul.menu li:hover{
+				background-color: #800;
+				box-shadow: 0px 4px 3px #bbb;
+			}
+
+			header nav ul.menu li:hover > a{
+				color:#000;
+			}
+
+			div.load{
+				height: 300px;
+				line-height: 300px;
+				text-align: center;
+				width: 800px;
+				margin: auto;
+				box-shadow: 0px 0px 10px #000;
+				border-radius: 3px;
+			}
+			-->
+		</style>
+  		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  		<script>
+  			<!--
+  			$(function() {
+				$( ".draggable" ).draggable();
+				$( ".load" ).droppable({ drop: function( event, ui ) {
+					href = $( ui.draggable ).find('a').attr('href') ;
+					$( ui.draggable ).fadeOut( "slow", function() {
+					    window.location.href = href ;
+					 });
+				}});
+			});
+  			-->
+  		</script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="content">
+				<header>
+					<h1>
+						<strong>
+							Drag Drop Menu
+						</strong>
+					</h1>
+					<nav>
+						<ul class="menu">
+							<li class="draggable ui-widget-content">
+								<a href="#page1" title="Load your page 1">Load your page 1</a>
+							</li>
+							<li class="draggable ui-widget-content">
+								<a href="#page2" title="Load your page 2">Load your page 2</a>
+							</li>
+							<li class="draggable ui-widget-content">
+								<a href="#page3" title="Load your page 3">Load your page 3</a>
+							</li>
+							<li class="draggable ui-widget-content">
+								<a href="#page4" title="Load your page 4">Load your page 4</a>
+							</li>
+							<li class="draggable ui-widget-content">
+								<a href="#page5" title="Load your page 5">Load your page 5</a>
+							</li>
+							<li class="draggable ui-widget-content">
+								<a href="#pageN" title="Load your page N">Load your page N</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+			</div>
+			<div class="load">
+				<h2>Drag your menu, and drop it here to load your page !</h2>
+			</div>
+		</div>
+	</body>
+</html>

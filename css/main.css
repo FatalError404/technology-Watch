@@ -106,3 +106,34 @@ section.howto{
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
+
+.slider{
+	width: 800px;
+	min-width: 800px;
+	height: 300px;
+	min-height: 300px;
+	line-height: 300px;
+	margin: auto;
+	box-shadow:8px 0 8px -10px #000000,-8px 0 8px -10px #000000;
+	position: relative;
+	background-color: #fff;
+	/* with width limit this rule enables to hide the inner bloc outside */
+	overflow: hidden;
+}
+
+.slide{
+	height: inherit;
+	width: inherit;
+	min-width: inherit;
+	min-height: inherit;
+	top: 0;
+	left: 0px ;
+	position: absolute;
+	color: #000;
+	background-color: #777;
+}
+
+.slide.current{
+	background-color: #aaa;
+	z-index: 1000;
+}
