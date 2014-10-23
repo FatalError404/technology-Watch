@@ -30,7 +30,8 @@
 		 * @fn regex( $object )
 		 */
 		private function regex( $object ){
-			return "#".	self::VAR_SEP_STA."{2}|".
+			return "#".	
+						self::VAR_SEP_STA."{2}|".
 						self::VAR_SEP_END."{2}|".
 						"\b(.+".self::OBJ_SYNTAX_OBJECT.")|".
 						self::OPE_SEP_STA."{1}|".
@@ -62,7 +63,7 @@
 					$string_result .= '<?php echo' ;
 					break;
 				case '}}':
-					$string_result .= ' ; ?>' ;
+					$string_result .= '; ?>' ;
 					break;
 				case '{%':
 					$string_result .= '<?php ' ;
@@ -72,16 +73,16 @@
 					break;
 				case strstr( $matches[0], self::OPE_SET_STA ) !== false:
 					$arr_string = explode( ' ', $matches[0] ) ;
+					$string_result .= '$'. $arr_string[1] . ' = ' . $arr_string[3] . '; ?>';
 					break;
 				case 	strstr( $matches[0], self::OPE_LOOP_STA ) !== false && 
 						strstr( $matches[0], self::OPE_LOOP_END ) === false :
 					$arr_string = explode( ' ', $matches[0] ) ;
-					$string_result .= 'foreach( $' . $arr_string[3] . ' as $' . $arr_string[1] . '){ ?>' ;
+					$string_result .= 'foreach( $' . $arr_string[3] . ' as $' . $arr_string[1] . ' ){ ?>' ;
 					break;
-				case strstr( $matches[0], self::OPE_LOOP_END ) !== false:
+				case 	strstr( $matches[0], self::OPE_LOOP_END ) !== false:
 					$string_result .= '}';
 					break;
-				
 			}
 			return $string_result ;
 		}

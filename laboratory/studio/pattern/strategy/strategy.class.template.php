@@ -53,7 +53,7 @@
 			return $instance;
 		}
 		/**
-		 * @fn calculate
+		 * @fn render( $object )
 		 */
 		public function render( $object ){
 			return $this->iStudioPatternStrategyInterface->render( $object, $this->filename );

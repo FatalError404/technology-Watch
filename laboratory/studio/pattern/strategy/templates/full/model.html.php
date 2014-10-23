@@ -5,4 +5,7 @@
 <p>
 	{{ object.description }}
 </p>
+<fieldset>
+	{{ object.content }}
+</fieldset>
 <hr />

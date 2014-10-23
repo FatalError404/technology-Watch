@@ -14,8 +14,12 @@
 		 */
 		protected function parse( $object, $filename ){
 			$this->cachefile = self::CACHE_DIR . '/' . md5( serialize( $object ) . $filename ) . '.php' ;
-			if( $this->cacheExist() && $this->cacheSizeOk( $object, $filename ) ){
-				$this->content = $this->getCache() ;
+			if( $this->cacheExist() ){
+				if( $this->cacheSizeOk( $object, $filename ) ){
+					$this->content = $this->getCache() ;
+				}else{
+					$this->cacheTemplate() ;
+				}
 			}else{
 				$this->content = $this->buildTemplate( $object, $filename ) ;
 				$this->cacheTemplate() ;
